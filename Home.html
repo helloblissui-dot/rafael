@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Heritage</title>
+  <link rel="stylesheet" href="rafael.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Neon Heritage</div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Artist</a></li>
+        <li><a href="#">Art</a></li>
+      </ul>
+      <div class="actions">
+        <button class="view-gallery">View Gallery →</button>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Neon Heritage</h1>
+      <p>Preserving the glow of Las Vegas history</p>
+      <div class="hero-buttons">
+        <button class="primary">Explore the Sign →</button>
+        <button class="secondary">View Gallery</button>
+      </div>
+      <div class="hero-image">
+        <img src="rafael.png" alt="Neon City">
+      </div>
+    </section>
+
+    <!-- about section -->
+
+    <!-- About the Gallery -->
+<section class="about-section container">
+  <header class="about-head">
+    <h2 class="neon-title">About the Gallery</h2>
+    <p class="about-sub">Where ‘Las Vegas’ legendary lights find new life</p>
+  </header>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>
+        The Neon Museum is dedicated to collecting, preserving, studying and exhibiting iconic Las Vegas signs
+        for educational, historic, arts and cultural enrichment. Founded in 1996, the museum has become one of
+        the city's most treasured cultural institutions.
+      </p>
+      <p>
+        Our collection features more than 250 unrestored signs and 8 restored signs from Las Vegas casinos,
+        hotels, and other businesses. Each sign tells a unique story about the city's vibrant history and the
+        evolution of American commercial art.
+      </p>
+      <p>
+        Through careful restoration and preservation, we ensure these luminous artifacts continue to shine for
+        generations to come, celebrating the artistry and craftsmanship of vintage neon.
+      </p>
+
+      <a href="#" class="btn-pill">
+        <span>Explore More</span>
+        <span class="btn-icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="map-card">
+      <!-- use any map/image you like -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.575163476106!2d90.43366761120032!3d23.762524578573174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b809fd8d4487%3A0x7c9b3001d76ccc77!2sFarazy%20Hospital%20Limited%20-%20Banasree!5e0!3m2!1sen!2sbd!4v1762178004928!5m2!1sen!2sbd" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- glowing pin (position via CSS variables) -->
+      <div class="pin" style="--x:54%; --y:48%;">
+        <div class="pin-badge">
+          <strong>Destination</strong><br>
+          Neon Museum
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <script src="rafael.js"></script>
+</body>
+</html>

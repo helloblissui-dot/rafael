@@ -1,0 +1,290 @@
+:root {
+  --bg-color: #0b0c10;
+  --text-color: #ffffff;
+  --accent-color: #00eaff;
+  --secondary-bg: #1a1a1a;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0078ff;
+  --secondary-bg: #f2f2f2;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  width: 90%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  padding: 1rem 4rem;
+  margin:10px 0px;
+  background-color: transparent;
+  background-color: #1a1a1a;
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-gallery {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-gallery:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 20px var(--accent-color);
+}
+
+.hero p {
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primary, .secondary {
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--bg-color);
+}
+
+.primary:hover {
+  opacity: 0.8;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.secondary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+}
+
+/* ---------- About Section ---------- */
+.neon-title{
+  font-size: 2.25rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 18px color-mix(in oklab, var(--accent-color) 40%, transparent);
+}
+.about-sub{
+  text-align: center;
+  opacity: .85;
+  margin-top: .35rem;
+  margin-bottom: 2rem;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 2rem;
+  align-items: start;
+  height: auto;
+}
+@media (max-width: 900px){
+  .about-grid{ grid-template-columns: 1fr; }
+}
+
+.about-copy{
+  font-size: .98rem;
+  line-height: 1.8;
+  opacity: .95;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* CTA pill button */
+.btn-pill{
+  align-self: flex-start;
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  margin-top: .5rem;
+  padding: .62rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: .25s ease;
+}
+.btn-pill:hover{
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+.btn-pill .btn-icon{
+  display: inline-grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  font-size: .95rem;
+}
+
+/* Map card with rounded corners */
+.map-card {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* fills 60% of viewport height, responsive */
+  border-radius: 20px;
+  overflow: hidden;
+  
+  box-shadow: 0 0 40px rgba(0, 234, 255, 0.2); /* optional neon effect */
+}
+
+.map-card iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Glowing pin + label */
+.pin{
+  --x: 50%;
+  --y: 50%;
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.pin::before{
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 999px;
+  background: radial-gradient(circle, var(--accent-color) 0 20%, transparent 45%);
+  filter: blur(18px);
+  opacity: .6;
+}
+.pin::after{
+  content: "";
+  position: absolute;
+  width: 10px; height: 10px;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow:
+    0 0 10px var(--accent-color),
+    0 0 24px var(--accent-color);
+  animation: ping 2.2s ease-out infinite;
+}
+
+@keyframes ping{
+  0%{ box-shadow: 0 0 10px var(--accent-color), 0 0 24px var(--accent-color); opacity: 1; }
+  70%{ box-shadow: 0 0 20px var(--accent-color), 0 0 60px color-mix(in oklab, var(--accent-color) 60%, transparent); opacity: .4; }
+  100%{ box-shadow: 0 0 10px var(--accent-color), 0 0 24px var(--accent-color); opacity: 1; }
+}
+
+/* Small white badge like the mock */
+.pin-badge{
+  position: absolute;
+  top: -52px; left: -70px;
+  background: #fff;
+  color: #111;
+  font-size: .72rem;
+  line-height: 1.1;
+  padding: .45rem .6rem;
+  border-radius: 10px;
+  box-shadow:
+    0 6px 24px rgba(0,0,0,.35),
+    0 0 0 2px rgba(255,255,255,.9) inset;
+  pointer-events: auto;
+}
+body.light .pin-badge{ background:#fff; color:#111; }
+
+/* spacing */
+.about-section{ padding: 3rem 0 4rem; }
