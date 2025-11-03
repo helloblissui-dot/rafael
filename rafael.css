@@ -288,3 +288,127 @@ body.light .pin-badge{ background:#fff; color:#111; }
 
 /* spacing */
 .about-section{ padding: 3rem 0 4rem; }
+/* ---------- About the Artist ---------- */
+/* ---------- About the Artist Section ---------- */
+.artist {
+  padding: 4rem 0;
+}
+
+.artist-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.artist-head .neon-title {
+  font-size: 2.25rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 18px color-mix(in oklab, var(--accent-color) 40%, transparent);
+  margin: 0;
+}
+
+.artist-head .muted {
+  opacity: 0.85;
+  margin-top: 0.35rem;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr; /* image | text */
+  gap: 2rem;
+  align-items: stretch; /* keeps both sides equal height */
+}
+
+@media (max-width: 900px) {
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Image */
+.artist-photo {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in oklab, var(--accent-color) 16%, transparent),
+    0 0 32px color-mix(in oklab, var(--accent-color) 24%, transparent);
+}
+
+.artist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Text */
+.artist-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  line-height: 1.75;
+}
+
+.artist-copy .accent {
+  color: var(--accent-color);
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Equal Height Feature Chips */
+.artist-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--secondary-bg) 85%, black);
+  border: 1px solid color-mix(in oklab, var(--accent-color) 14%, transparent);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  min-height: 110px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chip:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 234, 255, 0.25);
+}
+
+.chip-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+/* Light mode tweaks */
+body.light .artist-photo {
+  box-shadow:
+    0 8px 26px rgba(0, 0, 0, 0.15),
+    0 0 0 1px color-mix(in oklab, var(--accent-color) 22%, transparent),
+    0 0 26px color-mix(in oklab, var(--accent-color) 18%, transparent);
+}
+
+body.light .chip {
+  background: color-mix(in oklab, white 86%, var(--secondary-bg));
+  border-color: color-mix(in oklab, var(--accent-color) 20%, transparent);
+}
+
